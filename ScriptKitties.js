@@ -536,7 +536,14 @@ for (var i = 0; i < secondaryResources.length; i++) {
 var furDerivatives = ['parchment', 'manuscript', 'compedium', 'blueprint'];
 	for (var i = 0; i < furDerVal; i++) {
   		if (gamePage.workshop.getCraft(furDerivatives[i]).unlocked) { 
-				gamePage.craftAll(furDerivatives[i]); 
+  				if (i == 0) {
+  					var fur = gamePage.resPool.get("furs");
+  					if (fur >= 20000) {
+  						gamePage.craft("parchment",(fur - 20000)/175);
+  					}
+  				} else {
+  					gamePage.craftAll(furDerivatives[i]); 	
+  				}
 		}
 	}
 }	
