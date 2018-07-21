@@ -128,7 +128,7 @@ var buildingsList = [
 		];	
 		
 var resources = [
-       		["catnip", "wood", 50],
+       		["catnip", "wood", 500],
             ["wood", "beam", 175],
         	["minerals", "slab", 250],
             ["coal", "steel", 100],
